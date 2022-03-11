@@ -1,0 +1,117 @@
+section .about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 4rem;
+    
+}
+section .about .continear-img {
+width: 100%;
+cursor: pointer;
+margin-right: 5rem;
+
+}
+.img-back{
+    width: 400px;
+    height: 400px;
+    background:linear-gradient(45deg ,transparent,var(--color-prim),transparent) ;
+    border-radius: 20px;
+
+}
+.img-back img{
+    width: 100%;
+    height: 100%;
+    transform: rotate(10deg);
+    border-radius: 15px;
+    transition: var(--transition);
+    margin: 0 auto;
+}
+.img-back img:hover{
+    transform: rotate(0deg);
+}
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.about-info{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+}
+.about-info .div-box{
+    margin: 2rem 1rem;
+    padding: 1rem;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color:var(--color-back);
+    transition: var(--transition);
+}
+.about-info .div-box:hover{
+    background-color: transparent;
+}
+.icon{
+    color: var(--color-prim);
+    font-size: 25px;
+}
+.about-info .div-box >.text-light{
+line-height: 0;
+}
+.about-text{
+    width: 90%;
+    line-height: 2;
+    margin:1rem auto;    
+}
+.about-text > p{
+margin-bottom: 2rem;
+
+}
+/*=====================midem screen============================*/
+@media (max-width:1024px) {
+    section .about{
+    flex-direction: column;
+    }
+    section .about .continear-img{
+        margin: 0  auto;
+    }
+    .img-back{
+        width: 300px;
+        height: 300px;
+        margin: 0 auto 2rem auto;
+    }
+    
+}
+/*=====================small screen============================*/
+@media (max-width:600px) {
+    section .about{
+    flex-direction: column;
+    }
+    section .about .continear-img{
+        margin: 0 auto;
+    }
+    .img-back{
+        width: 250px;
+        height: 250px;
+
+    }
+    .about-info{
+        flex-wrap: wrap;
+    }
+    .about-info .div-box{
+        margin: 1rem .5rem;
+
+    }
+    .about-text{
+        text-align: center;
+    }
+}
